@@ -1,4 +1,3 @@
-from Model.Pessoa import Pessoa
 from Model.Aluno import Aluno
 from Model.Professor import Professor
 from Model.Curso import Curso
