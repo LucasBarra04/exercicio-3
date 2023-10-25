@@ -59,6 +59,8 @@ if __name__ == "__main__":
         aluno1.setNome('Zlatan')
         aluno1.setEscolaridade('Médio')
         aluno1.setEstadoEstuda(estado1.getSiglaEstado())
+        aluno1.setCoordenadorCurso(curso1.getNomeCoordenador())
+        aluno1.setCurso(curso1.getId())
 
         estado2.setSiglaEstado('Pr')
 
@@ -67,4 +69,7 @@ if __name__ == "__main__":
 
         estado2.setCidade(cidade2.getNomeCidade())
 
+        aluno1.setCidade(cidade2.getNomeCidade()) 
         aluno1.setEstadoNaturalidade(estado2.getSiglaEstado())
+
+        
