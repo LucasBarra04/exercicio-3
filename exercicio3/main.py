@@ -71,5 +71,4 @@ if __name__ == "__main__":
 
         aluno1.setCidade(cidade2.getNomeCidade()) 
         aluno1.setEstadoNaturalidade(estado2.getSiglaEstado())
-
         
