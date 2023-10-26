@@ -8,7 +8,10 @@ from Model.Escolaridade import Escolaridade
 from Model.Cidade import Cidade
 from Model.Estado import Estado
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
+
+        #Instanciação
+
         estado1 = Estado()
         cidade1 = Cidade()
         escolaridade1 = Escolaridade()
@@ -17,9 +20,10 @@ if __name__ == "__main__":
         curso1 = Curso()
         professor1 = Professor()
         aluno1 = Aluno()
-
         estado2 = Estado()
         cidade2 = Cidade()
+
+
 
         estado1.setSiglaEstado('RJ')
         
@@ -72,5 +76,30 @@ if __name__ == "__main__":
         aluno1.setCidade(cidade2.getNomeCidade()) 
         aluno1.setEstadoNaturalidade(estado2.getSiglaEstado())
 
-        #Prints
+        print("---------------------------------------------------")
+        print('ALUNO 1')
+        print()
+        print(f"Nome:", aluno1.getNome())
+        print(f"Escolaridade:", aluno1.getEscolaridade())
+        print(f"Estado de Naturalidade:", aluno1.getEstadoNaturalidade())
+        print(f"Cidade:", aluno1.getCidade())
+        print(f"Estado onde Estuda:", aluno1.getEstadoEstuda())
+        print(f"Coordenador do Curso:", aluno1.getCoordenadorCurso())
+        print(f"Curso:", aluno1.getCurso())
+        print()
+        
+        print("---------------------------------------------------")
+        print('PROFESSOR 1')
+        print()
+        print("Nome:", professor1.getNome())
+        print("Escolaridade:", professor1.getEscolaridade())
+        print("Estadoo de Naturalidade:", professor1.getEstadoNaturalidade())
+        print("Cidade:", professor1.getCidade())
+        print("Diretor:", professor1.getDiretor())
+        print("Coordenador:", professor1.getCoordenador())
+        print("Curso:", professor1.getCurso())
+        print("Tipo Ensino:", professor1.getTipoEnsino())
+        print("Escola:", professor1.getEscola())
+        print()
+
         
