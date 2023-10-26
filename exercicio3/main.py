@@ -30,14 +30,21 @@ if __name__ == "__main__":
         cidade1.setEstado(estado1.getSiglaEstado())
         cidade1.setNomeCidade('Resende')
         
-        estado1.addCidade(cidade1.getNomeCidade())
+        estado1.setCidade(cidade1.getNomeCidade())
         
         escola1.setCidade(cidade1.getNomeCidade())
         escola1.setId('09547')
         escola1.setNomeDiretor('José')
         escola1.setEscolaridadeDiretor('Ensino Superior')
+
+        cidade1.setEscola(escola1.getId())
         
         professor1.setNome('Arnaldo')
+
+        escola1.setProfessor(professor1.getNome())
+        curso1.setProfessor(professor1.getNome())
+        curso1.setEscolaridadeCoordenador('Superior')
+
         professor1.setEscola(escola1.getId())
         professor1.setCidade(cidade1.getNomeCidade())
         professor1.setDiretor(escola1.getNomeDiretor())
@@ -54,6 +61,7 @@ if __name__ == "__main__":
         tipoensino1.setTipoEnsino("Superior")
         
         curso1.setTipoEnsino(tipoensino1.getTipoEnsino())
+        professor1.setTipoEnsino(curso1.getTipoEnsino())
         
         escola1.setCurso(curso1.getId())
         
@@ -65,6 +73,8 @@ if __name__ == "__main__":
         aluno1.setEstadoEstuda(estado1.getSiglaEstado())
         aluno1.setCoordenadorCurso(curso1.getNomeCoordenador())
         aluno1.setCurso(curso1.getId())
+
+        curso1.setAlunos(aluno1.getNome())
 
         estado2.setSiglaEstado('PR')
 
@@ -102,4 +112,49 @@ if __name__ == "__main__":
         print("Escola:", professor1.getEscola())
         print()
 
-        
+        print("---------------------------------------------------")
+        print('ESCOLA')
+        print()
+        print("Id:", escola1.getId())
+        print("Nome do Diretor:", escola1.getNomeDiretor())
+        print("Professor:", escola1.getProfessor())
+        print("Cidade:", escola1.getCidade())
+        print("Escolaridade do Diretor:", escola1.getEscolaridadeDiretor())
+        print("Cursos:", escola1.getCurso())
+        print()
+
+        print("---------------------------------------------------")
+        print('CURSO')
+        print()
+        print("Id:", curso1.getId())
+        print("Nome do Coordenador:", curso1.getNomeCoordenador())
+        print("Escola:", curso1.getEscola())
+        print("Professor:", curso1.getProfessor())
+        print("Escolaridade do Coordenador:", curso1.getEscolaridadeCoordenador())
+        print("Tipo Ensino:", curso1.getTipoEnsino())
+        print("Aluno:", curso1.getAluno())
+        print()
+
+        print("---------------------------------------------------")
+        print('TIPO ENSINO')
+        print()
+        print("Tipo de Ensino:", tipoensino1.getTipoEnsino())
+        print("Cursos:", tipoensino1.getCurso())
+        print()
+
+        print("---------------------------------------------------")
+        print('CIDADE')
+        print()
+        print("Nome da Cidade:", cidade1.getNomeCidade())
+        print("Estado:", cidade1.getEstado())
+        print("Escolas:", cidade1.getEscola())
+        print()
+
+        print("---------------------------------------------------")
+        print('ESTADO')
+        print()
+        print("Sigla do Estado:", estado1.getSiglaEstado())
+        print("Cidades:", estado1.getCidade())
+        print()
+
+        print("---------------------------------------------------")
