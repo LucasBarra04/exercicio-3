@@ -1,4 +1,4 @@
-from Pessoa import Pessoa
+from Model.Pessoa import Pessoa
 
 class Professor(Pessoa):
     

@@ -1,26 +1,27 @@
+from Model.Pessoa import Pessoa
 from Model.Aluno import Aluno
 from Model.Professor import Professor
 from Model.Curso import Curso
 from Model.Escola import Escola
 from Model.Tipoensino import TipoEnsino
 from Model.Escolaridade import Escolaridade
-from.Model.Cidade import Cidade
+from Model.Cidade import Cidade
 from Model.Estado import Estado
 
 if __name__ == "__main__": 
-        estado1 = Estado
-        cidade1 = Cidade
-        escolaridade1 = Escolaridade
-        tipoensino1 = TipoEnsino
-        escola1 = Escola
-        curso1 = Curso
-        professor1 = Professor
-        aluno1 = Aluno
+        estado1 = Estado()
+        cidade1 = Cidade()
+        escolaridade1 = Escolaridade()
+        tipoensino1 = TipoEnsino()
+        escola1 = Escola()
+        curso1 = Curso()
+        professor1 = Professor()
+        aluno1 = Aluno()
 
-        estado2 = Estado
-        cidade2 = Cidade
+        estado2 = Estado()
+        cidade2 = Cidade()
 
-        estado1.setSiglaEstado('Rj')
+        estado1.setSiglaEstado('RJ')
         
         cidade1.setEstado(estado1.getSiglaEstado())
         cidade1.setNomeCidade('Resende')
@@ -61,7 +62,7 @@ if __name__ == "__main__":
         aluno1.setCoordenadorCurso(curso1.getNomeCoordenador())
         aluno1.setCurso(curso1.getId())
 
-        estado2.setSiglaEstado('Pr')
+        estado2.setSiglaEstado('PR')
 
         cidade2.setNomeCidade('Curitiba')
         cidade2.setEstado(estado2.getSiglaEstado())
@@ -70,4 +71,6 @@ if __name__ == "__main__":
 
         aluno1.setCidade(cidade2.getNomeCidade()) 
         aluno1.setEstadoNaturalidade(estado2.getSiglaEstado())
+
+        #Prints
         
