@@ -8,7 +8,7 @@ from Model.Escolaridade import Escolaridade
 from Model.Cidade import Cidade
 from Model.Estado import Estado
 
-if __name__ == "__main__":
+def Pricipal():
 
         #Instanciação
 
@@ -158,3 +158,6 @@ if __name__ == "__main__":
         print()
 
         print("---------------------------------------------------")
+
+if __name__ == '__main__':
+        Pricipal()
